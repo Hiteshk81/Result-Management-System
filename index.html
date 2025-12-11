@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Management System</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1> Result Management System</h1>
+  </header>
+
+  <main>
+
+    <section class="container">
+
+      <article class="card">
+        <h2>Add Student Result</h2>
+
+        <form id="resultForm">
+
+          <div class="input-group">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" required>
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="roll">Roll Number</label>
+            <input type="number" id="roll" required>
+            <small class="error" id="rollError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="marks">Marks (0 - 100)</label>
+            <input type="number" id="marks" min="0" max="100" required>
+            <small class="error" id="marksError"></small>
+          </div>
+
+          <button type="submit" class="btn">Add Result</button>
+        </form>
+      </article>
+
+      <button id="showResultsBtn" class="btn show-btn">Show Results</button>
+
+      <section id="resultsSection" class="card hidden">
+        <h2>Student Results</h2>
+
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Roll No</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p style="text-align:center; margin-top:20px; color:#777;">
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
